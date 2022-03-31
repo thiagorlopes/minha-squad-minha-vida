@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS Brazil FROM `minha-squad-minha-vida.data.covid__global_reports`;
