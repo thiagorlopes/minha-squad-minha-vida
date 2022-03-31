@@ -1,0 +1,1 @@
+SELECT* FROM `minha-squad-minha-vida.data.video_game__sales` ORDER BY Name ASC,Year ASC, Global_Sales DESC;
