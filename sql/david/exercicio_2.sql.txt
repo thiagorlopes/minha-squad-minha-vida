@@ -1,0 +1,12 @@
+WITH NEWTABLE AS (
+  SELECT  
+    IF(year='N/A','1980',year) as year,
+    ROUND(SUM(Global_Sales),2) as global_sales
+  FROM `minha-squad-minha-vida.data.video_game__sales`
+  GROUP BY 1
+)
+
+SELECT *, 
+SUM(global_sales) OVER(ORDER BY year) AS cumulative_global_sales
+FROM NEWTABLE
+ORDER BY 1
